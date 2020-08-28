@@ -13,16 +13,17 @@ def prime(n):
 def mega_prime(m):
     count=0
     while True:
+        print("prime")
         rem=m%10
         m=m//10
         if prime(rem)==1:
            count+=1
         rem+=1
         break
-    if prime(m)==1 and count<len(str(m)):
-        return("prime")
-    elif prime(m)==1 and count==len(str(m)):
+    if prime(m)==1 and count==len(str(m)):
         return("megaprime")
+    else:
+        return("not a megaprime")
 n=int(input())
 if prime(n)==1:
     print(mega_prime(n))
